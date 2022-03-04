@@ -34,9 +34,7 @@ const ul = document.getElementById('dog-breeds')
 fetch(breedUrl)
 .then(res => res.json())
 .then(data => {
-    // console.log(Object.keys(data.message))
     Object.keys(data.message).forEach(breed => {
-        // console.log(data.message)
         let li = document.createElement('li')
         li.id = "breed"
         li.innerText = breed
@@ -56,23 +54,19 @@ fetch(breedUrl)
 //CHALLENGE 3
 
 function changeColor(event){
-    // console.log(event)
     event.target.style.color = 'red';
-    // let li = document.getElementById('breed')
-    // console.log("hello");
-    // alert("hello");
-    // once <li> is clicked, it will change colors 
 
 }
 
+
+//CHALLENGE 4
+
 const select = document.getElementById('breed-dropdown')
-select.addEventListener('click', filterBreeds)
+select.addEventListener('change', filterBreeds)
 
 function filterBreeds(event){
     console.log(event)
-    // event.target.value = "a"    
-
-        console.log('hello')
+    
 
 
     //figure out where the array is
