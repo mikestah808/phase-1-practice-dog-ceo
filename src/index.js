@@ -8,7 +8,6 @@ const breedUrl = 'https://dog.ceo/api/breeds/list/all'
 window.addEventListener('DOMContentLoaded', () => {
     getDogs();
     getBreed();
-    changeColor();
 })
 
 
@@ -40,6 +39,8 @@ fetch(breedUrl)
         li.id = "breed"
         li.innerText = breed
         ul.append(li)
+
+        li.addEventListener('click', changeColor)
     })
 })
 }
@@ -52,10 +53,14 @@ fetch(breedUrl)
 
 //CHALLENGE 3
 
-function changeColor(){
-    let li = document.getElementById('breed')
-    li.addEventListener('click', (e) => {
-        console.log(e);
-    })
+function changeColor(event){
+    console.log(event)
+    event.target.style.color = 'red';
+    // let li = document.getElementById('breed')
+    // console.log("hello");
+    // alert("hello");
+    // once <li> is clicked, it will change colors 
 
 }
+
+
