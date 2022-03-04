@@ -56,7 +56,7 @@ fetch(breedUrl)
 //CHALLENGE 3
 
 function changeColor(event){
-    console.log(event)
+    // console.log(event)
     event.target.style.color = 'red';
     // let li = document.getElementById('breed')
     // console.log("hello");
@@ -65,12 +65,16 @@ function changeColor(event){
 
 }
 
+const select = document.getElementById('breed-dropdown')
+select.addEventListener('click', filterBreeds)
 
-function filterBreeds(breed){
-    // const array = data.message
-    console.log(breed)
-    // const result = array.filter(array => array.charAt[0] = 'a')
-    // console.log(result)
+function filterBreeds(event){
+    console.log(event)
+    // event.target.value = "a"    
+
+        console.log('hello')
+
+
     //figure out where the array is
     //figure out how to use the filter method on the array 
     //user can filter breeds that start with a particular letter
