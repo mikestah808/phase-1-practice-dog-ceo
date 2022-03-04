@@ -8,6 +8,7 @@ const breedUrl = 'https://dog.ceo/api/breeds/list/all'
 window.addEventListener('DOMContentLoaded', () => {
     getDogs();
     getBreed();
+    changeColor();
 })
 
 
@@ -36,6 +37,7 @@ fetch(breedUrl)
     // console.log(Object.keys(data.message))
     Object.keys(data.message).forEach(breed => {
         let li = document.createElement('li')
+        li.id = "breed"
         li.innerText = breed
         ul.append(li)
     })
@@ -43,3 +45,17 @@ fetch(breedUrl)
 }
 // 1. Review what Object.key does
 // 2. See how you can use Object.key for the data.message object
+
+
+
+
+
+//CHALLENGE 3
+
+function changeColor(){
+    let li = document.getElementById('breed')
+    li.addEventListener('click', (e) => {
+        console.log(e);
+    })
+
+}
