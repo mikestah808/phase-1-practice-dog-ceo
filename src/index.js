@@ -33,10 +33,13 @@ const ul = document.getElementById('dog-breeds')
 fetch(breedUrl)
 .then(res => res.json())
 .then(data => {
-    data.message.forEach(breed => {
+    // console.log(Object.keys(data.message))
+    Object.keys(data.message).forEach(breed => {
         let li = document.createElement('li')
         li.innerText = breed
         ul.append(li)
     })
 })
 }
+// 1. Review what Object.key does
+// 2. See how you can use Object.key for the data.message object
