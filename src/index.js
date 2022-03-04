@@ -8,6 +8,7 @@ const breedUrl = 'https://dog.ceo/api/breeds/list/all'
 window.addEventListener('DOMContentLoaded', () => {
     getDogs();
     getBreed();
+    filterBreeds();
 })
 
 
@@ -35,6 +36,7 @@ fetch(breedUrl)
 .then(data => {
     // console.log(Object.keys(data.message))
     Object.keys(data.message).forEach(breed => {
+        // console.log(data.message)
         let li = document.createElement('li')
         li.id = "breed"
         li.innerText = breed
@@ -61,6 +63,17 @@ function changeColor(event){
     // alert("hello");
     // once <li> is clicked, it will change colors 
 
+}
+
+
+function filterBreeds(breed){
+    // const array = data.message
+    console.log(breed)
+    // const result = array.filter(array => array.charAt[0] = 'a')
+    // console.log(result)
+    //figure out where the array is
+    //figure out how to use the filter method on the array 
+    //user can filter breeds that start with a particular letter
 }
 
 
